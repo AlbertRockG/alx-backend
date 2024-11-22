@@ -14,10 +14,12 @@ class Config(object):
     BABEL_DEFAULT_LOCALE = 'en'
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
+
 app = Flask(__name__)
 babel = Babel(app)
 app.config.from_object(Config)
 """Use that class as config for the app"""
+
 
 @app.route('/')
 def root():
